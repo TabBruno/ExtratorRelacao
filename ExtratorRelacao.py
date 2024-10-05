@@ -1,4 +1,4 @@
-import os
+ï»¿import os
 from os import chdir, getcwd, listdir
 import json
 import pandas as pd
@@ -13,8 +13,8 @@ if not os.path.exists(diretoriopadrao + "\\lidos\\"):
     os.mkdir (diretoriopadrao + "\\lidos\\")
 
 def mostrar_menu():
-    print("\nMenu de Opções:")
-    print("1 - Capturar Relações")
+    print("\nMenu de OpÃ§Ãµes:")
+    print("1 - Capturar RelaÃ§Ãµes")
     print("2 - Sair")
 
 def listararquivos():
@@ -49,7 +49,7 @@ def executa():
             salvaArquivo(result, json_file, "BT - ")
             
         else:
-            print("Arquivo inválido - " + json_file)
+            print("Arquivo invÃ¡lido - " + json_file)
         
         #move arquivos
         if os.path.exists(diretoriopadrao + "\\Lidos\\" + json_file):
@@ -108,7 +108,7 @@ def bt(caminho):
     with open(caminho) as arquivo:
         data = json.load(arquivo)
     
-    # Extrair as especificações do contrato para um DataFrame do pandas
+    # Extrair as especificaÃ§Ãµes do contrato para um DataFrame do pandas
     specs = []
     for item in data:
         for effect in item["effects"]:
@@ -153,7 +153,7 @@ def interop(caminho):
 
 while True:
     mostrar_menu()
-    escolha = input("Escolha uma opção: ")
+    escolha = input("Escolha uma opÃ§Ã£o: ")
     
     clear = lambda: os.system('cls')
     
@@ -165,4 +165,4 @@ while True:
         executa()
     else:
         clear()
-        print("Opção inválida. Tente novamente.")
+        print("OpÃ§Ã£o invÃ¡lida. Tente novamente.")
